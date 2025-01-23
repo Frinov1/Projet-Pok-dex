@@ -73,7 +73,31 @@
                 <p>Classe: Insecte volant</p>
             </div>
     </div>
+    <form>
+        <input type="button" value="Start machine"/>
+    </form>
+    <p class="button">the machine is stopped.</p>
 </body>
+<script>
+    const button = document.querySelector("input");
+
+    const paragraph = document.querySelector(".button");
+
+    button.addEventListener("click",updateButton);
+
+    function updateButton() {
+        if (button.value === "Start machine")
+    {
+        button.value = "Stop machine";
+        paragraph.textContent = "The machine as started!";
+
+     } else{
+        button.value = "Start machine";
+        paragraph.textContent = "The machine is stopped.";
+    }
+    }
+    
+</script>
 <style>
     h2 {
         color: white;
